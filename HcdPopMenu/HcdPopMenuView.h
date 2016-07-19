@@ -23,6 +23,7 @@ typedef void(^selectCompletionBlock)(NSInteger index);
  *  @param block   完成回调
  */
 + (void)createPopMenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
                    topView:(UIView *)topView
            completionBlock:(selectCompletionBlock)block;
 
@@ -33,6 +34,7 @@ typedef void(^selectCompletionBlock)(NSInteger index);
  *  @param block 完成回调
  */
 + (void)createPopMenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
            completionBlock:(selectCompletionBlock)block;
 
 /**
@@ -44,6 +46,7 @@ typedef void(^selectCompletionBlock)(NSInteger index);
  *  @param block  完成后的回调
  */
 + (void)createPopmenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
         backgroundImageUrl:(NSString *)urlStr
                     tipStr:(NSString *)tipStr
            completionBlock:(selectCompletionBlock)block;

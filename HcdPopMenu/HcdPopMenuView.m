@@ -38,20 +38,25 @@
 @implementation HcdPopMenuView
 
 + (void)createPopMenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
                    topView:(UIView *)topView
            completionBlock:(selectCompletionBlock)block {
     HcdPopMenuView *menu = [[HcdPopMenuView alloc]initWithItems:items];
     [menu setTopView:topView];
     [menu setSelectCompletionBlock:block];
+    [menu setExitViewImage:closeImageName];
 }
 
 + (void)createPopMenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
            completionBlock:(selectCompletionBlock)block {
     HcdPopMenuView *menu = [[HcdPopMenuView alloc]initWithItems:items];
     [menu setSelectCompletionBlock:block];
+    [menu setExitViewImage:closeImageName];
 }
 
 + (void)createPopmenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
         backgroundImageUrl:(NSString *)urlStr
                     tipStr:(NSString *)tipStr
            completionBlock:(selectCompletionBlock)block {
@@ -60,6 +65,7 @@
     [menu setBgImageViewByUrlStr:urlStr];
     [menu setSelectCompletionBlock:block];
     [menu setTipsLblByTipsStr:tipStr];
+    [menu setExitViewImage:closeImageName];
 }
 
 - (instancetype)initWithItems:(NSArray *)items {
@@ -74,7 +80,6 @@
         
         //初始化设置 退出小按钮
         _exitView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
-        _exitView.image = [UIImage imageNamed:@"center_exit"];
         CGPoint center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height - kBottomViewHeight / 2);
         _exitView.center = center;
         _exitView.transform = CGAffineTransformMakeRotation(M_PI_2/2);
@@ -447,6 +452,12 @@
 - (void)setTipsLblByTipsStr:(NSString *)tipsStr {
     if (_tipsLbl) {
         _tipsLbl.text = tipsStr;
+    }
+}
+
+- (void)setExitViewImage:(NSString *)imageName {
+    if (_exitView) {
+        _exitView.image = [UIImage imageNamed:imageName];
     }
 }
 

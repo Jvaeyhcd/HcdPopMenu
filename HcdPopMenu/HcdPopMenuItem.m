@@ -128,7 +128,8 @@ NSString *const kHcdPopMenuItemAttributeIconImageName    = @"HcdPopMenuItemAttri
 - (void)setAttrDic:(NSMutableDictionary *)attrDic {
     _attrDic = [attrDic copy];
     
-    UIImage *image = [attrDic objectForKey:kHcdPopMenuItemAttributeIconImageName];
+    NSString *imageName = [attrDic objectForKey:kHcdPopMenuItemAttributeIconImageName];
+    UIImage *image = [UIImage imageNamed:imageName];
     [self setImage:image forState:UIControlStateNormal];
     
     NSString *title = [attrDic objectForKey:kHcdPopMenuItemAttributeTitle];

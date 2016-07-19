@@ -33,8 +33,8 @@
 //打开菜单
 - (void)openMeu {
     
-    NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"海量投单", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"toudan_icon_hailiangtoudan"]},
-                              @{kHcdPopMenuItemAttributeTitle : @"定向投单", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"toudan_icon_dingxiangtoudan"]}];
+    NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"海量投单", kHcdPopMenuItemAttributeIconImageName : @"toudan_icon_hailiangtoudan"},
+                              @{kHcdPopMenuItemAttributeTitle : @"定向投单", kHcdPopMenuItemAttributeIconImageName : @"toudan_icon_dingxiangtoudan"}];
     
     CGFloat x,y,w,h;
     x = CGRectGetWidth(self.view.bounds)/2 - 213/2;
@@ -51,7 +51,7 @@
 //    [HcdPopMenuView createPopMenuItems:array topView:topView completionBlock:^(NSInteger index) {
 //        
 //    }];
-    [HcdPopMenuView createPopmenuItems:array backgroundImageUrl:@"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg" tipStr:@"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）" completionBlock:^(NSInteger index) {
+    [HcdPopMenuView createPopmenuItems:array closeImageName: @"center_exit" backgroundImageUrl:@"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg" tipStr:@"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）" completionBlock:^(NSInteger index) {
         
     }];
 }
