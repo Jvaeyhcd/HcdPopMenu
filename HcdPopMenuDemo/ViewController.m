@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor colorWithRed:0.282 green:0.651 blue:0.475 alpha:1.00];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(0, 0, 200, 30);
-    [button setTitle:@"点击弹出框" forState:UIControlStateNormal];
+    [button setTitle:@"Open" forState:UIControlStateNormal];
     [button.titleLabel setTextAlignment:NSTextAlignmentCenter];
     button.center = self.view.center;
     [self.view addSubview:button];
@@ -33,9 +33,8 @@
 //打开菜单
 - (void)openMeu {
     
-    NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"首页", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"center_photo"]},
-                              @{kHcdPopMenuItemAttributeTitle : @"首页", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"center_album"]}/*,
-                              @{kHcdPopMenuItemAttributeTitle : @"首页", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"center_vedio"]}*/];
+    NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"海量投单", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"toudan_icon_hailiangtoudan"]},
+                              @{kHcdPopMenuItemAttributeTitle : @"定向投单", kHcdPopMenuItemAttributeIconImageName : [UIImage imageNamed:@"toudan_icon_dingxiangtoudan"]}];
     
     CGFloat x,y,w,h;
     x = CGRectGetWidth(self.view.bounds)/2 - 213/2;
@@ -52,12 +51,9 @@
 //    [HcdPopMenuView createPopMenuItems:array topView:topView completionBlock:^(NSInteger index) {
 //        
 //    }];
-    [HcdPopMenuView createPopmenuItems:array backgroundImageUrl:@"http://www.wmpic.me/wp-content/uploads/2013/10/20131029231125754.jpg" tipStr:@"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）" completionBlock:^(NSInteger index) {
+    [HcdPopMenuView createPopmenuItems:array backgroundImageUrl:@"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg" tipStr:@"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）" completionBlock:^(NSInteger index) {
         
     }];
-//    [HcdPopMenu CreatingPopMenuObjectItmes:Objs TopView:topView SelectdCompletionBlock:^(MenuLabel *menuLabel, NSInteger index) {
-//        NSLog(@"Index-%ld",(long)index);
-//    }];
 }
 
 - (void)didReceiveMemoryWarning {
