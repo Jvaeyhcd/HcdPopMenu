@@ -68,6 +68,18 @@
     [menu setExitViewImage:closeImageName];
 }
 
++ (void)createPopmenuItems:(NSArray *)items
+            closeImageName:(NSString *)closeImageName
+       backgroundImageName:(NSString *)bgImageName
+                    tipStr:(NSString *)tipStr
+           completionBlock:(selectCompletionBlock)block {
+    HcdPopMenuView *menu = [[HcdPopMenuView alloc]initWithItems:items];
+    [menu setBgImageViewByImageName:bgImageName];
+    [menu setSelectCompletionBlock:block];
+    [menu setTipsLblByTipsStr:tipStr];
+    [menu setExitViewImage:closeImageName];
+}
+
 - (instancetype)initWithItems:(NSArray *)items {
     self = [super init];
     if (self) {
@@ -435,6 +447,12 @@
 - (void)setBgImageViewByUrlStr:(NSString *)urlStr {
     if (_bgImageView) {
         [_bgImageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:nil];
+    }
+}
+
+- (void)setBgImageViewByImageName: (NSString *)imageName {
+    if (_bgImageView) {
+        _bgImageView.image = [UIImage imageNamed:imageName];
     }
 }
 
