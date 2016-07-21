@@ -1,7 +1,7 @@
 HcdPopMenu
 ------
-![License](https://img.shields.io/cocoapods/l/TWPhotoPicker.svg)
-![Platform](https://img.shields.io/cocoapods/p/TWPhotoPicker.svg)
+![License](https://img.shields.io/cocoapods/l/HcdPopMenu.svg)
+![Platform](https://img.shields.io/cocoapods/p/HcdPopMenu.svg)
 
 ![图片](https://raw.githubusercontent.com/Jvaeyhcd/HcdPopMenu/master/screen.gif)
 
