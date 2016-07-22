@@ -1,8 +1,11 @@
 HcdPopMenu
 ------
 [![Version](https://img.shields.io/cocoapods/v/HcdPopMenu.svg?style=flat)](http://cocoapods.org/pods/HcdPopMenu)
-[![License](https://img.shields.io/cocoapods/l/HcdPopMenu.svg)](http://cocoapods.org/pods/HcdPopMenu)
+[![License](https://img.shields.io/github/license/Jvaeyhcd/HcdPopMenu.svg)](http://cocoapods.org/pods/HcdPopMenu)
 [![Platform](https://img.shields.io/cocoapods/p/HcdPopMenu.svg)](http://cocoapods.org/pods/HcdPopMenu)
+[![Tag](https://img.shields.io/github/tag/Jvaeyhcd/HcdPopMenu.svg
+)](http://cocoapods.org/pods/HcdPopMenu)
+[![Author](https://img.shields.io/badge/author-Jvaeyhcd-f07c3d.svg)](http://www.jvaeyhcd.cc)
 
 ![图片](https://raw.githubusercontent.com/Jvaeyhcd/HcdPopMenu/master/screen.gif)
 
