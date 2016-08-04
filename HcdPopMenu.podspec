@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HcdPopMenu"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "HcdPopMenu is pop animation PopMenu like Sina weibo."
 
   # This description is used to generate tags and improve search results.

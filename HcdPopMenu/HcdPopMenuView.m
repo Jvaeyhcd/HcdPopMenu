@@ -8,7 +8,7 @@
 
 #import "HcdPopMenuView.h"
 #import "HcdPopMenu.h"
-#import "POP.h"
+#import <pop/POP.h>
 
 #define kDuration 0.2
 #define kBottomViewTag 10
