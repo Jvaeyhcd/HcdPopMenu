@@ -11,4 +11,4 @@
 
 #import "HcdPopMenuItem.h"
 #import "HcdPopMenuView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
