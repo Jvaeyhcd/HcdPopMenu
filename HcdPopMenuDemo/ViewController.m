@@ -48,16 +48,22 @@
     topView.contentMode = UIViewContentModeScaleAspectFit;
     
     
-//    [HcdPopMenuView createPopMenuItems:array topView:topView completionBlock:^(NSInteger index) {
-//        
-//    }];
-    [HcdPopMenuView createPopmenuItems:array
-                        closeImageName: @"center_exit"
-                    backgroundImageUrl:@"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg"
-                                tipStr:@"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）"
-                       completionBlock:^(NSInteger index) {
-        
+    HcdPopMenuView *menu = [[HcdPopMenuView alloc]initWithItems:array];
+    [menu setBgImageViewByUrlStr: @"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg"];
+    [menu setTipsLblByTipsStr: @"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）"];
+    [menu setExitViewImage: @"center_exit"];
+    
+    [menu setSelectCompletionBlock:^(NSInteger index) {
+        NSLog(@"%ld", (long)index);
     }];
+    
+//    [HcdPopMenuView createPopmenuItems:array
+//                        closeImageName: @"center_exit"
+//                    backgroundImageUrl: @"http://img3.duitang.com/uploads/item/201411/17/20141117102333_rwHMH.thumb.700_0.jpeg"
+//                                tipStr: @"海量投单是所有人都可以看到的投单，定向投单则是针对有目的性的投单（如企业投单）"
+//                       completionBlock:^(NSInteger index) {
+//                           NSLog(@"%ld", (long)index);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

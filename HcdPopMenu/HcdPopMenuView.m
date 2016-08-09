@@ -352,7 +352,9 @@
 -(void)menuItemSelected:(HcdPopMenuItem *)menuItem
 {
     NSInteger tag = menuItem.tag - (kBasePopMenuTag + 1);
-    typeof(self) weak = self;
+    
+    __block HcdPopMenuView *weakSelf = self;
+    
     for (NSMutableDictionary *dict in _items) {
         NSInteger index = [_items indexOfObject:dict];
         HcdPopMenuItem *buttons = (HcdPopMenuItem *)[self viewWithTag:(index + 1) + kBasePopMenuTag];
@@ -363,10 +365,10 @@
         }
     }
     [self hideDelay:0.3f completionBlock:^(BOOL completion) {
-        if (!weak.block) {
+        if (!weakSelf.block) {
             return ;
         }
-        weak.block(tag);
+        weakSelf.block(tag);
     }];
 }
 

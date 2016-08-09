@@ -16,6 +16,50 @@ typedef void(^selectCompletionBlock)(NSInteger index);
 @property (nonatomic, weak            ) UIView  *topView;
 
 /**
+ *  根据items创建HcdPopMenu
+ *
+ *  @param items items
+ *
+ *  @return HcdPopMenu的对象
+ */
+- (instancetype)initWithItems:(NSArray *)items;
+
+/**
+ *  根据图片资源的名称设置背景
+ *
+ *  @param imageName 图片资源的名称
+ */
+- (void)setBgImageViewByImageName: (NSString *)imageName;
+
+/**
+ *  通过url地址设置背景图片
+ *
+ *  @param urlStr 图片地址
+ */
+- (void)setBgImageViewByUrlStr:(NSString *)urlStr;
+
+/**
+ *  设置选择了某个items的回调block
+ *
+ *  @param block block
+ */
+- (void)setSelectCompletionBlock:(selectCompletionBlock)block;
+
+/**
+ *  设置提示的文字
+ *
+ *  @param tipsStr 提示文字
+ */
+- (void)setTipsLblByTipsStr:(NSString *)tipsStr;
+
+/**
+ *  设置退出图片资源文件名称
+ *
+ *  @param imageName 图片资源文件名称
+ */
+- (void)setExitViewImage:(NSString *)imageName;
+
+/**
  *  创建PopMenu
  *
  *  @param items          items参数
