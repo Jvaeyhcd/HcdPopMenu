@@ -68,18 +68,6 @@
     [menu setExitViewImage:closeImageName];
 }
 
-+ (void)createPopmenuItems:(NSArray *)items
-            closeImageName:(NSString *)closeImageName
-       backgroundImageName:(NSString *)bgImageName
-                    tipStr:(NSString *)tipStr
-           completionBlock:(selectCompletionBlock)block {
-    HcdPopMenuView *menu = [[HcdPopMenuView alloc]initWithItems:items];
-    [menu setBgImageViewByImageName:bgImageName];
-    [menu setSelectCompletionBlock:block];
-    [menu setTipsLblByTipsStr:tipStr];
-    [menu setExitViewImage:closeImageName];
-}
-
 - (instancetype)initWithItems:(NSArray *)items {
     self = [super init];
     if (self) {
@@ -352,9 +340,7 @@
 -(void)menuItemSelected:(HcdPopMenuItem *)menuItem
 {
     NSInteger tag = menuItem.tag - (kBasePopMenuTag + 1);
-    
-    __block HcdPopMenuView *weakSelf = self;
-    
+    typeof(self) weak = self;
     for (NSMutableDictionary *dict in _items) {
         NSInteger index = [_items indexOfObject:dict];
         HcdPopMenuItem *buttons = (HcdPopMenuItem *)[self viewWithTag:(index + 1) + kBasePopMenuTag];
@@ -365,10 +351,10 @@
         }
     }
     [self hideDelay:0.3f completionBlock:^(BOOL completion) {
-        if (!weakSelf.block) {
+        if (!weak.block) {
             return ;
         }
-        weakSelf.block(tag);
+        weak.block(tag);
     }];
 }
 
@@ -449,12 +435,6 @@
 - (void)setBgImageViewByUrlStr:(NSString *)urlStr {
     if (_bgImageView) {
         [_bgImageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:nil];
-    }
-}
-
-- (void)setBgImageViewByImageName: (NSString *)imageName {
-    if (_bgImageView) {
-        _bgImageView.image = [UIImage imageNamed:imageName];
     }
 }
 
