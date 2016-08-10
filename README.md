@@ -1,5 +1,5 @@
-HcdPopMenu
-------
+# HcdPopMenu
+
 [![Version](https://img.shields.io/cocoapods/v/HcdPopMenu.svg?style=flat)](http://cocoapods.org/pods/HcdPopMenu)
 [![License](https://img.shields.io/github/license/Jvaeyhcd/HcdPopMenu.svg)](http://cocoapods.org/pods/HcdPopMenu)
 [![Platform](https://img.shields.io/cocoapods/p/HcdPopMenu.svg)](http://cocoapods.org/pods/HcdPopMenu)
@@ -9,17 +9,17 @@ HcdPopMenu
 
 ![图片](https://raw.githubusercontent.com/Jvaeyhcd/HcdPopMenu/master/screen.gif)
 
-### Requirements
+## Requirements
 * Xcode 6 or higher
 * iOS 7.0 or higher
 * ARC
 
-### Installation
-#### Manual Install
+## Installation
+### Manual Install
 
 All you need to do is drop `HcdPopMenu` files into your project, and add `#include "HcdPopMenu.h"` to the top of classes that will use it.
 
-#### Cocoapods
+### Cocoapods
 
 Change to the directory of your Xcode project:
 ``` bash
@@ -43,7 +43,7 @@ $ open YourProject.xcworkspace
 
 > Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Before you `pod install`, you should run `pod setup`.
 
-### Example Usage
+## Example
 
 ``` objc
 NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"海量投单", kHcdPopMenuItemAttributeIconImageName : @"toudan_icon_hailiangtoudan"},
@@ -53,5 +53,5 @@ NSArray *array = @[@{kHcdPopMenuItemAttributeTitle : @"海量投单", kHcdPopMen
 
 }];
 ```
-### SpecialThanks
+## SpecialThanks
 https://github.com/MLGZ/PopMenu
