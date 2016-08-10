@@ -28,7 +28,7 @@
 
 @property (nonatomic, weak  ) UIView *blurView;
 @property (nonatomic, copy  ) NSArray *items;
-@property (nonatomic, weak  ) selectCompletionBlock block;
+@property (nonatomic, strong) selectCompletionBlock block;
 @property (nonatomic, strong) UIImageView *exitView;
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, strong) UILabel     *tipsLbl;
