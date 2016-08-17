@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HcdPopMenu"
-  s.version      = "0.1.0"
+  s.version      = "1.0.0"
   s.summary      = "HcdPopMenu is pop animation PopMenu like Sina weibo."
 
   # This description is used to generate tags and improve search results.
@@ -133,7 +133,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "pop"
-  s.dependency "SDWebImage"
+  s.dependency "pop", '~> 1.0.9'
+  s.dependency "SDWebImage", '~> 3.8.1'
 
 end
